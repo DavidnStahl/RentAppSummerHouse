@@ -1,0 +1,169 @@
+﻿@model rentapp.ViewModels.EmailViewModel
+@{
+    ViewData["Title"] = "Info Uthyrning";
+}
+
+
+<div class="text-white" style="background-color:black;">
+    <div class="container">
+        <h2 class="text-center">Information Uthyrning</h2>
+
+        <h3>Beskrivning</h3>
+        <p>
+            Ljus och fräsch sommarstuga belägen i Vintersbo precis vid havet.
+            6 bäddplatser.
+        </p>
+        <br>
+        <p>
+            Barnvänlig tomt i lugnt läge med promenadavstånd till havet och badplats med sandstrand.
+            Sydvästläge med kvällssol på uteplats med härlig utsikt över det öppna landskapet.
+
+        </p>
+        <p>Sydvästläge med kvällssol på uteplats med härlig utsikt över det öppna landskapet.</p>
+        <p>Båtplats finns som kan nyttjas för egen båt (max längd 5m).</p>
+        <p>
+            Huvudbyggnad 48 kvm delvis nyrenoverad med:
+        </p>
+        <ul>
+            <li>
+                Vardagsrum med TV och Öppen spis
+            </li>
+            <li>
+                Nytt fräscht kök med diskmaskin, matplats med matbord
+            </li>
+            <li>
+                2 små sovrum med 2 bäddar i vardera rum
+            </li>
+            <li>
+                Tvättrum
+            </li>
+            <li>
+                Uteplats under tak med fantastisk utsikt och kvällssol
+            </li>
+            <li>
+                Gäststuga ca 10 kvm med (ny) bäddsoffa med 2 bäddar
+            </li>
+            <li>
+                Dusch och toalett (modern separett) finns I ett eget litet hus på tomten
+            </li>
+            <li>
+                Wifi finns (fiber)
+            </li>
+        </ul>
+
+        <p>I närområdet finns olika utflyktsmål, avstånd med Bil:</p>
+        <ul>
+            <li>
+                Mataffär (välsorterad ICA butik), apotek etc I Östra Husby - 27 min
+            </li>
+            <li>
+                Kolmårdens djurpark - 1 timme
+            </li>
+            <li>
+                Söderköping - 45 min
+            </li>
+            <li>
+                Arkösund - 32 min
+            </li>
+            <li>
+                Stegeborgs Hamnkrog - 42 min
+            </li>
+            <li>
+                Mauritzbergs Slott och Golfbana - 34 min
+            </li>
+            <li>
+                Vikbolandets strutsfarm - 25 min
+            </li>
+        </ul>
+
+        <p>Veckoavgift högsäsong 5000 kr</p>
+        <br />
+        <p>Lediga veckor:</p>
+        <p>v. 24, v. 33, v. 34</p>
+    </div>
+</div>
+
+
+<footer>
+    <div class="container-fluid">
+        <div class="col-md-12">
+            <p>
+                Copyright &copy; 2020 Roger Ståhl
+
+                | Designed by David Ståhl
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+<!-- Modal button -->
+<div class="popup-icon">
+    <button id="modBtn" class="modal-btn"><img src="~/content/img/contact-icon.png" alt=""></button>
+</div>
+
+<!-- Modal -->
+<div id="modal" class="modal">
+    <!-- Modal Content -->
+    <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+            <h3 class="header-title container">Frågor om <em>uthyrning</em></h3>
+            <div class="close-btn"><img src="~/content/img/close_contact.png" alt=""></div>
+        </div>
+        <!-- Modal Body -->
+        <div class="modal-body">
+
+            <div class="col-md-6 col-md-offset-3">
+
+                <form id="contact" action="" method="post" enctype="text/plain">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <fieldset>
+                                <input name="name" type="text" class="form-control" id="name" placeholder="Your name..." required="">
+                            </fieldset>
+                        </div>
+                        <div class="col-md-12">
+                            <fieldset>
+                                <input name="email" type="email" class="form-control" id="email" placeholder="Your email..." required="">
+                            </fieldset>
+                        </div>
+                        <div class="col-md-12">
+                            <fieldset>
+                                <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your message..." required=""></textarea>
+                            </fieldset>
+                        </div>
+                        <div class="col-md-12">
+                            <fieldset>
+                                <button type="submit" id="form-submit" class="btn">Send Message Now</button>
+                            </fieldset>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<section class="overlay-menu">
+    <div class="container">
+        <div class="row">
+            <div class="main-menu container-fluid">
+                <ul>
+                    <li>
+                        <a asp-action="Index" asp-controller="Home">Hem</a>
+                    </li>
+                    <li>
+                        <a asp-action="Info" asp-controller="Home">Uthyrning info</a>
+                    </li>
+                    <li>
+                        <a asp-action="Contact" asp-controller="Home">Kontakt</a>
+                    </li>
+                </ul>
+                <p>Sommarhus i S:t Annas Skärgård på Vikbolandet uthyres</p>
+            </div>
+        </div>
+    </div>
+</section>

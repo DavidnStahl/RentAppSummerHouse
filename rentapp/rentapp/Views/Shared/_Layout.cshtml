@@ -1,0 +1,74 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=chrome,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Vintersbo</title>
+    
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="apple-touch-icon" href="~/content/apple-touch-icon.png">
+    <link rel="apple-touch-icon" href="~/content/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="~/content/css/bootstrap.min.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/content/css/bootstrap-theme.min.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/content/css/fontAwesome.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/content/css/light-box.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/content/css/templatemo-style.css"asp-append-version="true">
+
+    <link href="https://fonts.googleapis.com/css?family=Kanit:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    
+    <script src="~/content/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js" asp-append-version="true"></script>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <a asp-action="Index" asp-controller="Home">Vinters<em>bo</em></a>
+        </div>
+        <div class="menu-icon">
+            <span></span>
+        </div>
+    </nav>
+
+    <div id="video-container">
+        <div class="video-overlay"></div>
+        <div class="video-content">
+            <div class="inner">
+                <h4 style="color: white;">VÄLKOMNA TILL <em>VINTERSBO</em></h4>
+
+                <div class="scroll-icon">
+                    <a class="scrollTo" data-scrollTo="portfolio" href="#"><img src="~/content/img/scroll-icon.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+
+        <video id="videoplayer" muted src="~/content/video/fredrik.mp4" autoplay loop="">
+        </video>
+
+
+    </div>
+
+    <div class="container-fluid">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="~/content/js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+    <script src="~/content/js/vendor/bootstrap.min.js" asp-append-version="true"></script>
+
+    <script src="~/content/js/plugins.js" asp-append-version="true"></script>
+    <script src="~/content/js/main.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
+
